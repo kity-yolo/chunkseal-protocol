@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chunkseal-protocol"
+version = "0.1.0"
+description = "A seekable, authenticated, chunked encrypted file container"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "ChunkSeal contributors"}]
+dependencies = ["cryptography>=43"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
