@@ -10,8 +10,14 @@ trap 'rm -rf -- "$CHUNKSEAL_CLASSES"' EXIT
 "$CHUNKSEAL_PYTHON" -m unittest discover -s "$CHUNKSEAL_ROOT/tests" -v
 javac --release 17 -encoding UTF-8 -Xlint:all -Werror -d "$CHUNKSEAL_CLASSES" \
   "$CHUNKSEAL_ROOT/reference/java/src/chunkseal/ChunkSeal.java" \
-  "$CHUNKSEAL_ROOT/reference/java/test/chunkseal/ChunkSealTest.java"
+  "$CHUNKSEAL_ROOT/reference/java/src/chunkseal/ChunkSealV2.java" \
+  "$CHUNKSEAL_ROOT/reference/java/test/chunkseal/ChunkSealTest.java" \
+  "$CHUNKSEAL_ROOT/reference/java/test/chunkseal/ChunkSealV2Test.java"
 "$CHUNKSEAL_PYTHON" "$CHUNKSEAL_ROOT/tools/interop.py" write "$CHUNKSEAL_CLASSES"
+"$CHUNKSEAL_PYTHON" "$CHUNKSEAL_ROOT/tools/interop_v2.py" write "$CHUNKSEAL_CLASSES"
 java -cp "$CHUNKSEAL_CLASSES" chunkseal.ChunkSealTest \
   "$CHUNKSEAL_ROOT/test-vectors/v1.properties" "$CHUNKSEAL_CLASSES"
+java -cp "$CHUNKSEAL_CLASSES" chunkseal.ChunkSealV2Test \
+  "$CHUNKSEAL_ROOT/test-vectors/v2.properties" "$CHUNKSEAL_CLASSES"
 "$CHUNKSEAL_PYTHON" "$CHUNKSEAL_ROOT/tools/interop.py" verify "$CHUNKSEAL_CLASSES"
+"$CHUNKSEAL_PYTHON" "$CHUNKSEAL_ROOT/tools/interop_v2.py" verify "$CHUNKSEAL_CLASSES"

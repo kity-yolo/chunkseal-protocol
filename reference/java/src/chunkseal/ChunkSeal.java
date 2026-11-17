@@ -25,7 +25,7 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-/** Independent JDK reference for the container specified in SPEC.md. */
+/** Independent JDK reference for the v1 container specified in SPEC-V1.md. */
 public final class ChunkSeal {
     public static final int VERSION = 1;
     public static final int HEADER_SIZE = 64;
