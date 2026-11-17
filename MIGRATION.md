@@ -31,4 +31,7 @@ The new reference reader accepts only `CSEA`. Applications that must keep readin
 can explicitly dispatch to the legacy and new readers based on the header; do not let a single
 reader ignore or loosely match the file identifier.
 
-The standalone reference reader in this repository accepts only `CSEA`.
+The standalone reference reader in this repository accepts only `CSEA`. See
+[ADDITIONAL-PERMISSION.md](ADDITIONAL-PERMISSION.md) for GPLv3 integration into
+[Tingyu](https://github.com/qiuyuxc/tingyu);
+the default license for code and documentation remains AGPLv3.

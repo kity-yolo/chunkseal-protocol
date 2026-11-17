@@ -189,3 +189,4 @@ Random salt and prefix generation makes ordinary encryptions intentionally
 nondeterministic.
 
 Protocol code and documentation: AGPL-3.0-only; see `LICENSE` and `NOTICE`.
+Additional GPLv3 permission: [ADDITIONAL-PERMISSION.md](ADDITIONAL-PERMISSION.md).

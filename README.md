@@ -1,5 +1,7 @@
 # ChunkSeal
 
+Source repository: [kity-yolo/chunkseal-protocol](https://github.com/kity-yolo/chunkseal-protocol).
+
 A chunked encrypted file container with random access. The input can be any file; a reader
 fetches only the ciphertext chunks covering the requested range, verifies each chunk, and
 returns the plaintext. It works with local files and storage that supports HTTP Range.
@@ -73,4 +75,8 @@ documented file format draft that has not yet undergone an independent cryptogra
 ## License
 
 Code and documentation are **AGPL-3.0-only**; see [LICENSE](LICENSE) and [NOTICE](NOTICE).
-Third-party dependencies retain their own licenses.
+The [Tingyu integration permission](ADDITIONAL-PERMISSION.md) permits covered original
+material to be integrated into [Tingyu](https://github.com/qiuyuxc/tingyu) and distributed
+as part of that program under **GPL-3.0-only**. Retain the copyright notices, permission
+notice and [GPLv3 text](licenses/GPL-3.0.txt) with those copies. Third-party material and
+contributions whose copyright holders have not adopted the permission retain their own licenses.

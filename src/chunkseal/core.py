@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 # Copyright (C) 2026 ChunkSeal contributors
+# Additional GPLv3 permission: see ADDITIONAL-PERMISSION.md.
 """Reference implementation of the byte format specified in SPEC.md."""
 
 from __future__ import annotations

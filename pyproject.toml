@@ -9,9 +9,12 @@ description = "A seekable, authenticated, chunked encrypted file container"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "AGPL-3.0-only"
-license-files = ["LICENSE", "NOTICE"]
+license-files = ["LICENSE", "NOTICE", "ADDITIONAL-PERMISSION.md", "licenses/GPL-3.0.txt"]
 authors = [{name = "ChunkSeal contributors"}]
 dependencies = ["cryptography>=43"]
+
+[project.urls]
+Repository = "https://github.com/kity-yolo/chunkseal-protocol"
 
 [tool.setuptools.packages.find]
 where = ["src"]
